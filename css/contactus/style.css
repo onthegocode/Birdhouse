@@ -93,9 +93,11 @@ header {
 /* Add nav hover effect with image later */
 .nav a:link,
 .nav a:visited {
-	font-family: var(--ff-title);
+	font-family: var(--ff-body);
 	color: var(--clr-accent);
-	font-size: 3rem;
+	font-size: 1.6rem;
+	font-weight: 300;
+	text-transform: uppercase;
 	transition: var(--hover-transition);
 }
 
