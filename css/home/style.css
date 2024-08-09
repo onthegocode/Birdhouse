@@ -108,7 +108,7 @@ header {
 /* #region Header */
 
 .header {
-	background: url("https://raw.githubusercontent.com/onthegocode/Birdhouse/main/media/logos/headinglogo.png") center / cover no-repeat;
+	background: url("https://raw.githubusercontent.com/onthegocode/Birdhouse/main/media/images/homeHeader.jpg") center / cover no-repeat;
 	height: var(--header-imageSize);
 	width: 100%;
 	display: flex;
