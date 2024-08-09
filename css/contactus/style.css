@@ -103,9 +103,7 @@ header {
 
 .nav a:hover,
 .nav a:active {
-	font-family: var(--ff-title);
 	color: var(--clr-primary);
-	font-size: 3rem;
 }
 
 .navLogo {
