@@ -1,0 +1,373 @@
+/* #region Variable Start */
+:root {
+	--clr-primary: #dab2cd;
+	--clr-secondary: #ffffff;
+	--clr-accent: #9a9739;
+	--ff-title: "Artsyrawplain", serif;
+	--ff-title-second: "Artsyraw", serif;
+	--ff-body: "Chivo", sans-serif;
+	--shadow-main: 2px 4px 20px 0px rgba(0, 0, 0, 0.1);
+	--hover-transition: all 0.3s ease;
+	--max-screen: 1280px;
+}
+/* #endregion Variable End */
+
+/* #region Default Settings Start */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%; /*1rem = 10px*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--ff-title);
+}
+
+.container {
+	max-width: var(--max-screen);
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+a {
+	text-decoration: none;
+}
+/* #endregion Default Settings End */
+
+/* #region Utility */
+.btn:link,
+.btn:visited {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.8rem 2rem;
+	font-family: var(--ff-title);
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	color: var(--clr-secondary);
+	background-color: var(--clr-accent);
+	border: 2px solid var(--clr-accent);
+	width: fit-content;
+	border-radius: 100rem;
+	margin-top: 1rem;
+	transition: var(--hover-transition);
+}
+
+.btn:hover,
+.btn:active {
+	background: transparent;
+	color: var(--clr-accent);
+}
+
+/* #endregion Utility */
+
+/* #region nav */
+header {
+	box-shadow: var(--shadow-main);
+	background-color: var(--clr-secondary);
+}
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Add nav hover effect with image later */
+.nav a:link,
+.nav a:visited {
+	font-family: var(--ff-title);
+	color: var(--clr-accent);
+	font-size: 3rem;
+	transition: var(--hover-transition);
+}
+
+.nav a:hover,
+.nav a:active {
+	font-family: var(--ff-title);
+	color: var(--clr-primary);
+	font-size: 3rem;
+}
+
+.navLogo {
+	height: 16rem;
+}
+/* #endregion nav */
+
+/* #region Header */
+
+.header {
+	background: url("/media/images/homeHeader.jpg") center / cover no-repeat;
+	height: var(--header-imageSize);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.headerLogo {
+	width: 28rem;
+	height: 28rem;
+	margin-bottom: 10rem;
+	opacity: 0.8;
+}
+
+/* #endregion Header */
+
+/* #region About Us */
+/* .aboutUs {
+	margin-top: 12rem;
+	margin-bottom: 12rem;
+}
+
+.aboutUsContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 6rem;
+}
+
+.aboutUsImg img {
+	width: 50rem;
+	max-width: 50rem;
+	height: 60rem;
+	object-fit: cover;
+}
+
+.aboutUsContent {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.aboutUsContent h2 {
+	color: var(--clr-primary);
+	font-size: 7.6rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.aboutUsContent h3 {
+	color: var(--clr-accent);
+	font-size: 3.2rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.aboutUsContent p {
+	font-size: 1.6rem;
+	line-height: 1.5;
+	font-family: var(--ff-body);
+	font-style: normal;
+	font-weight: 200;
+} */
+
+/* #endregion About Us */
+
+/* #region Real About Us */
+h2 {
+	font-size: 4.8rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: var(--clr-accent);
+}
+
+h3 {
+	font-family: var(--ff-body);
+	font-size: 2rem;
+	font-weight: 200;
+	color: var(--clr-accent);
+}
+
+.aboutUs {
+	margin-top: 12rem;
+	margin-bottom: 12rem;
+	position: relative;
+}
+
+.aboutUs p {
+	font-family: var(--ff-body);
+	font-size: 1.6rem;
+	font-weight: 200;
+	line-height: 1.5;
+	margin-bottom: 2rem;
+}
+
+.aboutUsContainer {
+	display: flex;
+	align-items: center;
+	gap: 6rem;
+}
+
+.aboutUsContent {
+	margin-bottom: 13rem;
+}
+
+.aboutUsContentHead {
+	margin-bottom: 6rem;
+}
+
+.aboutUsBg {
+	position: absolute;
+	width: 100%;
+	height: 35rem;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #f8f0f5;
+	z-index: -1;
+	opacity: 0.6;
+}
+
+.aboutUsImg img {
+	width: 52rem;
+	height: 56rem;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 100rem 100rem 0 0;
+}
+/* #endregion Real About Us */
+
+/* #region Footer */
+footer {
+	background-color: #ffffff;
+	box-shadow: var(--shadow-main);
+	padding-top: 4rem;
+}
+
+.footerTop {
+	display: flex;
+	justify-content: space-between;
+}
+.footerMain {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6rem;
+}
+.footerLogo {
+	max-width: 18rem;
+}
+
+.footerInfo {
+	display: flex;
+	flex-direction: column;
+	max-width: 30rem;
+}
+
+.footerInfo p {
+	font-size: 1.6rem;
+	font-family: var(--ff-body);
+	font-weight: 200;
+}
+
+.footerInfo-contact {
+	display: flex;
+	flex-direction: column;
+}
+
+.footerInfo-contact a:link,
+.footerInfo-contact a:visited {
+	font-family: var(--ff-body);
+	font-size: 1.6rem;
+	font-weight: 200;
+	color: #000;
+	transition: var(--hover-transition);
+}
+
+.footerInfo-contact a:hover,
+.footerInfo-contact a:active {
+	color: var(--clr-primary);
+}
+
+.footerMail a:link,
+.footerMail a:visited,
+.footerPhone a:link,
+.footerPhone a:visited {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.footerMail svg path,
+.footerPhone svg path,
+.footerInfo-contact a:hover svg path,
+.footerInfo-contact a:active svg path {
+	fill: var(--clr-accent);
+	transition: var(--hover-transition);
+}
+.footerInfo-contact a:hover svg path,
+.footerInfo-contact a:active svg path {
+	fill: var(--clr-primary);
+}
+.footerMail svg {
+	width: 3rem;
+	height: 2rem;
+}
+.footerPhone svg {
+	width: 2.6rem;
+}
+
+.footerLinks ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 50rem;
+}
+
+.footerLinks ul a:link,
+.footerLinks ul a:visited {
+	font-family: var(--ff-title);
+	font-size: 3rem;
+	color: var(--clr-accent);
+	transition: var(--hover-transition);
+}
+
+.footerLinks ul a:hover,
+.footerLinks ul a:active {
+	color: var(--clr-primary);
+}
+
+.footerBottom {
+	border-top: 1px solid rgba(154, 151, 57, 0.4);
+	margin-top: 6rem;
+}
+
+.footerBottomLinks {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	align-items: center;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	gap: 5rem;
+}
+
+.footerBottomLinks a:link,
+.footerBottomLinks a:visited {
+	color: #000;
+	font-family: var(--ff-body);
+	font-weight: 200;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	transition: var(--hover-transition);
+}
+
+.footerBottomLinks a:hover,
+.footerBottomLinks a:active {
+	color: var(--clr-primary);
+}
+
+/* #endregion Footer */

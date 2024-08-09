@@ -1,0 +1,354 @@
+/* #region Variable Start */
+:root {
+	--clr-primary: #dab2cd;
+	--clr-secondary: #ffffff;
+	--clr-accent: #9a9739;
+	--ff-title: "Artsyrawplain", serif;
+	--ff-title-second: "Artsyraw", serif;
+	--ff-body: "Chivo", sans-serif;
+	--shadow-main: 2px 4px 20px 0px rgba(0, 0, 0, 0.1);
+	--hover-transition: all 0.3s ease;
+	--max-screen: 1280px;
+}
+/* #endregion Variable End */
+
+/* #region Default Settings Start */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%; /*1rem = 10px*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--ff-title);
+}
+
+.container {
+	max-width: var(--max-screen);
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+a {
+	text-decoration: none;
+}
+/* #endregion Default Settings End */
+
+/* #region Utility */
+.btn:link,
+.btn:visited {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.8rem 2rem;
+	font-family: var(--ff-title);
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	color: var(--clr-secondary);
+	background-color: var(--clr-accent);
+	border: 2px solid var(--clr-accent);
+	width: fit-content;
+	border-radius: 100rem;
+	margin-top: 1rem;
+	transition: var(--hover-transition);
+}
+
+.btn:hover,
+.btn:active {
+	background: transparent;
+	color: var(--clr-accent);
+}
+
+/* #endregion Utility */
+
+/* #region nav */
+header {
+	box-shadow: var(--shadow-main);
+	background-color: var(--clr-secondary);
+}
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Add nav hover effect with image later */
+.nav a:link,
+.nav a:visited {
+	font-family: var(--ff-title);
+	color: var(--clr-accent);
+	font-size: 3rem;
+	transition: var(--hover-transition);
+}
+
+.nav a:hover,
+.nav a:active {
+	font-family: var(--ff-title);
+	color: var(--clr-primary);
+	font-size: 3rem;
+}
+
+.navLogo {
+	height: 16rem;
+}
+/* #endregion nav */
+
+/* #region About Birdhouse */
+h2 {
+	font-size: 7.2rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: var(--clr-accent);
+	margin-bottom: 3rem;
+}
+
+main p {
+	font-family: var(--ff-body);
+	font-size: 1.6rem;
+	font-weight: 200;
+	line-height: 1.5;
+	color: inherit;
+}
+
+.about {
+	margin-top: 8rem;
+}
+
+.aboutContainer {
+	display: flex;
+	align-items: center;
+	gap: 6rem;
+}
+
+.aboutImage img {
+	width: 52rem;
+	height: 52rem;
+	object-fit: cover;
+	object-position: left;
+}
+/* #endregion About Birdhouse */
+
+/* #region Meet Anna */
+.meet {
+	margin-top: 12rem;
+}
+
+.meetContainer {
+	display: flex;
+	align-items: center;
+	gap: 6rem;
+}
+
+.meetImage img {
+	width: 52rem;
+	height: 60rem;
+	object-fit: cover;
+	object-position: left;
+}
+
+/* #endregion Meet Anna */
+
+/* #region Approach */
+.approach {
+	margin-top: 12rem;
+}
+
+.approachContainer {
+	display: flex;
+	align-items: center;
+	gap: 6rem;
+}
+
+.approachImage img {
+	width: 52rem;
+	height: 52rem;
+	object-fit: cover;
+	object-position: left;
+}
+/* #endregion Approach */
+
+/* #region Philosophy */
+.philosophy {
+	margin-top: 12rem;
+}
+
+.philosophyContainer {
+	display: flex;
+	align-items: center;
+	gap: 6rem;
+}
+
+.philosophyImage img {
+	width: 52rem;
+	height: 52rem;
+	object-fit: cover;
+	object-position: left;
+}
+
+/* #endregion Philosophy */
+
+/* #region Collaborate */
+.CTA {
+	margin-top: 12rem;
+	margin-bottom: 12rem;
+}
+
+.CTAContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.CTAContent p {
+	max-width: 80rem;
+	margin-bottom: 3rem;
+}
+
+/* #endregion Collaborate */
+
+/* #region Footer */
+footer {
+	background-color: #ffffff;
+	box-shadow: var(--shadow-main);
+	padding-top: 4rem;
+}
+
+.footerTop {
+	display: flex;
+	justify-content: space-between;
+}
+.footerMain {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6rem;
+}
+.footerLogo {
+	max-width: 18rem;
+}
+
+.footerInfo {
+	display: flex;
+	flex-direction: column;
+	max-width: 30rem;
+}
+
+.footerInfo p {
+	font-size: 1.6rem;
+	font-family: var(--ff-body);
+	font-weight: 200;
+}
+
+.footerInfo-contact {
+	display: flex;
+	flex-direction: column;
+}
+
+.footerInfo-contact a:link,
+.footerInfo-contact a:visited {
+	font-family: var(--ff-body);
+	font-size: 1.6rem;
+	font-weight: 200;
+	color: #000;
+	transition: var(--hover-transition);
+}
+
+.footerInfo-contact a:hover,
+.footerInfo-contact a:active {
+	color: var(--clr-primary);
+}
+
+.footerMail a:link,
+.footerMail a:visited,
+.footerPhone a:link,
+.footerPhone a:visited {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.footerMail svg path,
+.footerPhone svg path,
+.footerInfo-contact a:hover svg path,
+.footerInfo-contact a:active svg path {
+	fill: var(--clr-accent);
+	transition: var(--hover-transition);
+}
+.footerInfo-contact a:hover svg path,
+.footerInfo-contact a:active svg path {
+	fill: var(--clr-primary);
+}
+.footerMail svg {
+	width: 3rem;
+	height: 2rem;
+}
+.footerPhone svg {
+	width: 2.6rem;
+}
+
+.footerLinks ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 50rem;
+}
+
+.footerLinks ul a:link,
+.footerLinks ul a:visited {
+	font-family: var(--ff-title);
+	font-size: 3rem;
+	color: var(--clr-accent);
+	transition: var(--hover-transition);
+}
+
+.footerLinks ul a:hover,
+.footerLinks ul a:active {
+	color: var(--clr-primary);
+}
+
+.footerBottom {
+	border-top: 1px solid rgba(154, 151, 57, 0.4);
+	margin-top: 6rem;
+}
+
+.footerBottomLinks {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	align-items: center;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	gap: 5rem;
+}
+
+.footerBottomLinks a:link,
+.footerBottomLinks a:visited {
+	color: #000;
+	font-family: var(--ff-body);
+	font-weight: 200;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	transition: var(--hover-transition);
+}
+
+.footerBottomLinks a:hover,
+.footerBottomLinks a:active {
+	color: var(--clr-primary);
+}
+
+/* #endregion Footer */
