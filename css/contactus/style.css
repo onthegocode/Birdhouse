@@ -351,8 +351,10 @@ footer {
 
 .footerLinks ul a:link,
 .footerLinks ul a:visited {
-	font-family: var(--ff-title);
-	font-size: 3rem;
+	font-family: var(--ff-body);
+	font-size: 1.6rem;
+	font-weight: 300;
+	text-transform: uppercase;
 	color: var(--clr-accent);
 	transition: var(--hover-transition);
 }
