@@ -97,7 +97,7 @@ header {
 }
 .nav a::before {
 	content: "";
-	background: url("/media/fonts/underline.svg") no-repeat;
+	background: url("https://raw.githubusercontent.com/onthegocode/Birdhouse/2f288ccf9ca38b27384bdde309171819b35b9deb/media/fonts/underline.svg") no-repeat;
 	display: flex;
 	justify-content: center;
 	align-items: center;
