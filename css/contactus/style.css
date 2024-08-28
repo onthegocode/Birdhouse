@@ -1,0 +1,426 @@
+/* #region Variable Start */
+:root {
+	--clr-primary: #dab2cd;
+	--clr-secondary: #ffffff;
+	--clr-accent: #9a9739;
+	--ff-title: "Artsyrawplain", serif;
+	--ff-title-second: "Artsyraw", serif;
+	--ff-body: "Chivo", sans-serif;
+	--shadow-main: 2px 4px 20px 0px rgba(0, 0, 0, 0.1);
+	--hover-transition: all 0.3s ease;
+	--max-screen: 1280px;
+}
+/* #endregion Variable End */
+
+/* #region Default Settings Start */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%; /*1rem = 10px*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--ff-title);
+}
+
+.container {
+	max-width: var(--max-screen);
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+a {
+	text-decoration: none;
+}
+/* #endregion Default Settings End */
+
+/* #region Utility */
+.btn:link,
+.btn:visited {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.6rem 4.4rem;
+	font-family: var(--ff-title);
+	font-size: 3.2rem;
+	text-transform: uppercase;
+	color: var(--clr-secondary);
+	background-color: var(--clr-primary);
+	border-radius: 3rem 0px;
+	border: 2px solid var(--clr-primary);
+	width: fit-content;
+	margin-top: 1rem;
+	transition: var(--hover-transition);
+}
+
+.btn:hover,
+.btn:active {
+	background: transparent;
+	color: var(--clr-primary);
+}
+
+.row {
+	display: flex;
+	gap: 1rem;
+	width: 100%;
+}
+
+/* #endregion Utility */
+
+/* #region nav */
+header {
+	box-shadow: var(--shadow-main);
+	background-color: var(--clr-secondary);
+}
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Add nav hover effect with image later */
+.nav a:link,
+.nav a:visited {
+	position: relative;
+	font-family: var(--ff-body);
+	color: var(--clr-accent);
+	font-size: 1.6rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	transition: var(--hover-transition);
+}
+
+.nav a::before {
+	content: "";
+	background: url("/media/fonts/underline.svg") no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	height: 2rem;
+	bottom: -120%;
+	left: 0%;
+	opacity: 0;
+	transition: var(--hover-transition);
+}
+
+.nav a:hover::before,
+.nav a:hover::before {
+	opacity: 1;
+}
+
+.nav a:hover,
+.nav a:active {
+	/* color: var(--clr-primary); */
+}
+.noneBf::before {
+	display: none !important;
+}
+.navLogo {
+	height: 16rem;
+}
+/* #endregion nav */
+
+/* #region Header */
+.contactUsContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.contactUsHeadImage {
+	width: 100%;
+	height: var(--header-imageSize);
+}
+
+.contactUsHeadImage img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.contactUsHeadContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 6rem;
+	max-width: 80rem;
+}
+
+.contactUsHeadContent h2 {
+	font-size: 8rem;
+	font-weight: 400;
+	color: var(--clr-accent);
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+}
+
+.getInTouch {
+	margin-top: 6rem;
+}
+
+.contactUsHeadContent h3 {
+	font-size: 4rem;
+	font-weight: 400;
+	color: var(--clr-accent);
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+.contactUsHeadContent p {
+	font-family: var(--ff-body);
+	font-weight: 200;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+.getInTouch a:link,
+.getInTouch a:visited {
+	color: inherit;
+	font-family: var(--ff-body);
+	font-weight: 200;
+	font-size: 1.6rem;
+	transition: var(--hover-transition);
+}
+
+.getInTouch a:hover,
+.getInTouch a:active {
+	color: var(--clr-accent);
+}
+.phone a:link,
+.phone a:visited,
+.mail a:link,
+.mail a:visited {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.phone a:link svg path,
+.phone a:visited svg path,
+.mail a:link svg path,
+.mail a:visited svg path {
+	fill: var(--clr-accent);
+}
+
+.phone svg {
+	width: 2.6rem;
+}
+
+.mail svg {
+	width: 3rem;
+	height: 2rem;
+}
+
+/* #endregion Header */
+
+/* #region Contact Form */
+input,
+textarea {
+	display: inline-block;
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	padding: 1.6rem 0 1.6rem 2rem;
+}
+
+*::placeholder {
+	font-family: var(--ff-body);
+	font-weight: 200;
+	font-size: 1.6rem;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.submitBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 6rem;
+	font-family: var(--ff-title);
+	font-size: 3.2rem;
+	text-transform: uppercase;
+	color: var(--clr-secondary);
+	background-color: var(--clr-accent);
+	border-radius: 100rem;
+	border: 2px solid var(--clr-accent);
+	width: fit-content;
+	margin-top: 1rem;
+	cursor: pointer;
+	transition: var(--hover-transition);
+}
+
+.submitBtn:hover {
+	background: transparent;
+	color: var(--clr-accent);
+}
+
+.contactForm {
+	margin-top: 12rem;
+	margin-bottom: 12rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.contactFormContainer {
+	width: 85rem;
+}
+
+.submitContainer {
+	display: flex;
+	justify-content: end;
+}
+/* #endregion Contact Form */
+
+/* #region Footer */
+footer {
+	background-color: #ffffff;
+	box-shadow: var(--shadow-main);
+	padding-top: 4rem;
+}
+
+.footerTop {
+	display: flex;
+	justify-content: space-between;
+}
+.footerMain {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6rem;
+}
+.footerLogo {
+	max-width: 18rem;
+}
+
+.footerInfo {
+	display: flex;
+	flex-direction: column;
+	max-width: 30rem;
+}
+
+.footerInfo p {
+	font-size: 1.6rem;
+	font-family: var(--ff-body);
+	font-weight: 200;
+}
+
+.footerInfo-contact {
+	display: flex;
+	flex-direction: column;
+}
+
+.footerInfo-contact a:link,
+.footerInfo-contact a:visited {
+	font-family: var(--ff-body);
+	font-size: 1.6rem;
+	font-weight: 200;
+	color: #000;
+	transition: var(--hover-transition);
+}
+
+.footerInfo-contact a:hover,
+.footerInfo-contact a:active {
+	color: var(--clr-primary);
+}
+
+.footerMail a:link,
+.footerMail a:visited,
+.footerPhone a:link,
+.footerPhone a:visited {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.footerMail svg path,
+.footerPhone svg path,
+.footerInfo-contact a:hover svg path,
+.footerInfo-contact a:active svg path {
+	fill: var(--clr-accent);
+	transition: var(--hover-transition);
+}
+.footerInfo-contact a:hover svg path,
+.footerInfo-contact a:active svg path {
+	fill: var(--clr-primary);
+}
+.footerMail svg {
+	width: 3rem;
+	height: 2rem;
+}
+.footerPhone svg {
+	width: 2.6rem;
+}
+
+.footerLinks ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 50rem;
+}
+
+.footerLinks ul a:link,
+.footerLinks ul a:visited {
+	font-family: var(--ff-body);
+	font-size: 1.6rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: var(--clr-accent);
+	transition: var(--hover-transition);
+}
+
+.footerLinks ul a:hover,
+.footerLinks ul a:active {
+	color: var(--clr-primary);
+}
+
+.footerBottom {
+	border-top: 1px solid rgba(154, 151, 57, 0.4);
+	margin-top: 6rem;
+}
+
+.footerBottomLinks {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	align-items: center;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	gap: 5rem;
+}
+
+.footerBottomLinks a:link,
+.footerBottomLinks a:visited {
+	color: #000;
+	font-family: var(--ff-body);
+	font-weight: 200;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	transition: var(--hover-transition);
+}
+
+.footerBottomLinks a:hover,
+.footerBottomLinks a:active {
+	color: var(--clr-primary);
+}
+
+/* #endregion Footer */

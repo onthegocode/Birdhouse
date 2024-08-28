@@ -1,0 +1,17 @@
+@font-face {
+	font-family: "Artsyraw";
+	src: url("7eb885a5840e8579a3a112f54025e939.woff2") format("woff2"),
+		url("7eb885a5840e8579a3a112f54025e939.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Artsyrawplain";
+	src: url("25592209b77514c5bb83aae8bbd9c079.woff2") format("woff2"),
+		url("25592209b77514c5bb83aae8bbd9c079.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
