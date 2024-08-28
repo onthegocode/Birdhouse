@@ -102,7 +102,7 @@ header {
 
 .nav a::before {
 	content: "";
-	background: url("/media/fonts/underline.svg") no-repeat;
+	background: url("https://raw.githubusercontent.com/onthegocode/Birdhouse/92563bceb95926effacba860763d3674fe8455b6/media/fonts/underline.svg") no-repeat;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -128,7 +128,7 @@ header {
 /* #region Header */
 
 .header {
-	background: url("/media/images/homeHeader.jpg") center / cover no-repeat;
+	background: url("https://raw.githubusercontent.com/onthegocode/Birdhouse/main/media/images/homeHeader.jpg") center / cover no-repeat;
 	height: var(--header-imageSize);
 	width: 100%;
 	display: flex;
